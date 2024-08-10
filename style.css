@@ -1,0 +1,79 @@
+*{
+    /* margin:0;
+    height:0;*/
+    font-family: "Poppins", sans-serif; 
+}
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  padding:2% 6%;
+ }
+.name{
+    display:flex;
+    border:  #000080 solid;
+    background: #000080;
+    padding:1px 20px;
+    border-radius:5px;
+}
+.name h4{
+ 
+  text-align:center;
+  color:white;
+  text-align:left;
+}
+.nav-links{
+ 
+  flex:1;
+  
+  text-align:center;
+
+}
+.nav-links ul li{
+  justify-content: space-evenly;
+  display:inline-block;
+  list-style:none;
+  padding-left:px;
+  padding-right:5px;
+position:relative;
+
+
+}
+.nav-links ul li a{
+  padding-right:25px;
+  color:black;
+  font-weight:400;
+  font-size:20px;
+  text-decoration:none;
+}
+
+.nav-links ul li :hover{
+ color: #000080;
+ text-decoration: underline;
+
+}
+.user-icon{
+  padding-left:50px;
+}
+.donate{
+border:2px  #000080;
+background: #000080;
+color:white;
+padding:10px 28px;
+font-size: 17px;
+border-radius:7px;
+
+}
+.fa{
+  padding-right:7px;
+}
+.user-icon{
+  height:20px;
+  width:20px;
+}
+  .user-icon .fa{
+    font-size: 30px;
+    color:#000080;
+    
+  }
+
