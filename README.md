@@ -1,0 +1,2 @@
+Disaster mangement website that gives live alerts, news, safety precautions to be taken before and at the time of a natural calamity. Disaster Connect  provides real time weather forecasting by geolocation API implementation.
+We have implemented user authentication for a more personalised view. Disaster Connect also raises funds through donations. We have also added a little quiz section to increase interraction.
