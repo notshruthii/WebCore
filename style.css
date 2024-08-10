@@ -142,6 +142,7 @@ margin-top:60px;
    .container{
     margin:auto;
     text-align:center;
+    padding-bottom:100px;
 
    }
    .rows{
@@ -158,17 +159,18 @@ margin-top:60px;
     margin-right:250px;
     width:100%;
     background-size:cover;
-    padding:100px;
+    
     text-align:center;
     border-radius:3px;
  padding-top:10px;
  transition:1s;
- position:relative;
+ 
 margin-top:-30px;
     
    }
    .weather:hover{
     background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("images/weather2.avif");
+    padding:100px;
 
    }
    .geo-btn{
@@ -182,11 +184,44 @@ margin-top:-30px;
     
 
    }
+   
    .weather p{
     color:white;
-    font-weight:700;
+    font-weight:600;
     font-size:16px;
    }
+   .about{
+    display:flex;
+    flex-basis:55%;
+    margin-left:-160px;
+    text-align:left;
+    margin-right:30px;
+    font-size:18px;
+    
+   }
+   .about h4{
+    width:100%;
+    font-weight:550;
+   }
+   .footer
+   {
+    padding-top:40px;
+    text-align:center;
+   }
+   .footer p{
+    font-size:20px;
+    text-align:center;
+    padding-right:30px;
+   }
+    .creator{
+    padding-left:30px;
+   }
+   .footer .fa{
+    padding-right:30px;
+    font-size:20px;
+    color:#000080;
+   }
+
 
 
    
