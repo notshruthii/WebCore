@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ff0000; /* Red color */
+    background-color: #df0303e3; /* Red color */
     color: #ffffff;
     padding: 10px;
     text-align: center;
@@ -15,17 +15,29 @@
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
+  }
+  
+  .alert-icon {
     background-image: url('warningsymbol.png'); /* Replace with your image URL */
-    background-size: 22px 22px; /* Adjust the size to fit your image */
-    padding-left: 30px; /* Add padding to move the text */
+    background-size: 24px 24px; /* Adjust the size to fit your image */
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 10px;
     background-repeat: no-repeat;
   }
   
   .alert-message {
     display: inline-block;
     white-space: nowrap;
-    animation: move-right 17s linear infinite;
-    margin-left: 50px; /* Adjust the margin to fit the fixed content */
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .moving-link {
+    display: inline-block;
+    white-space: nowrap;
+    animation: move-right 10s linear infinite;
   }
   
   @keyframes move-right {
