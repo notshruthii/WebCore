@@ -1,72 +1,48 @@
 <!DOCTYPE html>
-<html>
-    <script src="https://kit.fontawesome.com/e8fa2e31b4.js" crossorigin="anonymous"></script>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Portal</title>
     <link rel="stylesheet" href="dstyle.css">
-    <head>
-        <body>
-            <div class="container">
-                <div class="left">
-                    <p>Payment method</p>
-                    <hr style="border:1px solid #ccc; margin: 0 15px;">
-                    <div class="methods">
-                       
-                            <div onclick="doFun()" id="tColorA" style="color: greenyellow;"><i class="fa-solid fa-credit-card" style="color: greenyellow;"></i>Payment by card</div>
-                            <div onclick="doFunA()" id="tColorB"><i class="fa-solid fa-building-column"></i>Internet Banks</div>  
-                            <div onclick="doFunB()" id="tColorC"><i class="fa-solid fa-wallet"></i>Apple/Google Pay</div>
-                                
-                                            
-                    </div>
-                    <hr style="border:1px solid #ccc; margin: 0 15px;">
-                </div>
-                <div class="center">
-                    <a href="https://www.shift4shop.com/credit-card-logos.html"><img alt="Credit Card Logos" title="Credit Card Logos" src="https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png" width="250" height="auto"/> </a>
-                    <hr style="border:1px solid #ccc; margin: 0 15px;"></hr>
-
-                    <div class="card-details">
-                        <form>
-                            <p>Card number</p>
-                            <div class="c-number" id ="c-number">
-                                <input id ="number" class="cc-number" placeholder="Card number" maxlength="19" required>
-                                <i class="fa-solid fa-credit-card" style="margin: 0;"></i>
-                            </div>
-                            <div class="c-details">
-                                <div>
-                                    <p>Expiry date</p>
-                                    <input id="e-date" class="cc-exp" placeholder="MM/YY" required maxlength="5" required>
-                                </div>
-                                <div>
-                                    <p>
-                                        CVV
-                                    </p>
-                                    <div class="cvv-box" id="cvv-box">
-                                        <input id="cvv" class="cc-cvv" placeholder="CVV" required maxlength="3" required>
-                                        <i class="fa-solid fa-circle-question" title="3 digit on the back of the card" style="cursor: pointer;"></i>
-                                        
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="email">
-                                <p>Email</p>
-                                <input type="email" placeholder="example@email.com" id="email" required>
-
-                            </div>
-                            <button>
-                                PAY NOW
-                            </button>
-                        </form>
-                    </div>
-
-                </div>
-
-                <div class="right">
-                    <p></p>
+</head>
+<body>
+    <div class="donation-portal">
+        <h2>Make a Donation</h2>
+        <form id="donation-form">
+            <div class="amount-options">
+                <label>Amount:</label>
+                <div class="amount-btns">
+                    <button type="button" class="amount-btn">Rs. 500</button>
+                    <button type="button" class="amount-btn">Rs. 1000</button>
+                    <button type="button" class="amount-btn">Rs. 2500</button>
+                    <button type="button" class="amount-btn">Rs. 5000</button>
                 </div>
             </div>
-           
-                  <script src="card.js"></script>
-        </body>
-    </head>
-
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="payment-option">Payment Option:</label>
+                <select id="payment-option" name="payment-option" required>
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="netbanking">Net Banking</option>
+                    <option value="gpay">Google Pay</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <button type="submit" class="donate-btn">Donate</button>
+        </form>
+    </div>
+    <script src="card.js"></script>
+</body>
 </html>
