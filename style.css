@@ -1,20 +1,80 @@
 *{
     /* margin:0;
-    height:0;
-    font-family: "Poppins", sans-serif; */
+    height:0;*/
+    font-family: "Poppins", sans-serif; 
 }
-.container{
-  margin:auto;
-  display:inline-flex;
-  width:80%;
-  flex-basis:23%;
-  padding-top:20px;
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  padding:2% 6%;
  }
 .name{
-  padding:10px 5px;
-  display:flex;
-    flex-basis:23%;
-    border:2px rgb(0, 195, 255) solid;
-    background:rgb(0, 195, 255)
+    display:flex;
+    border:  #000080 solid;
+    background: #000080;
+    padding:1px 20px;
+}
+.name h4{
+ 
+  text-align:center;
+  color:white;
+  text-align:left;
+}
+.nav-links{
+ 
+  flex:1;
+  
+  text-align:center;
 
 }
+.nav-links ul li{
+  justify-content: space-evenly;
+  display:inline-block;
+  list-style:none;
+  padding-left:10px;
+  padding-right:5px;
+position:relative;
+
+
+}
+.nav-links ul li a{
+  padding-right:25px;
+  color:black;
+  font-weight:400;
+  font-size:20px;
+  text-decoration:none;
+}
+
+.nav-links ul li :hover{
+ color: #000080;
+ text-decoration: underline;
+
+}
+.user-icon{
+  padding-left:20px;
+}
+.donate{
+border:2px  #000080;
+background: #000080;
+color:white;
+padding:10px 20px;
+font-size: 17px;
+border-radius:7px;
+
+}
+.fa{
+  padding-right:7px;
+}
+.user-icon{
+  height:20px;
+  width:20px;
+  color:#000080;
+  font-size: 20px;;
+  background: white;
+  padding-left:30px;
+  }
+  .user-icon .fa{
+    border:#000080;
+  }
+
