@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <style>
+                *{
+                    padding:0;
+                    margin:0;
+                    box-sizing:border-box;
+                }
+                body{
+                    font-family:Arial;
+                    background:linear-background(rgb(174, 174, 245),rgb(252, 252, 253));
+                    
+                }
+                .contact-container{
+                    height:100vh;
+                    display:flex;
+                    align-items:center;
+                    justify-content: space-evenly;
+                    
+                }
+                .contact-left{
+                    display:flex;
+                    flex-direction:column;
+                    align-items:start;
+                    gap:20px;
+                }
+                .contact-left-title h2{
+                    font-weight:600;
+                    color:black;
+                    font-size:40px;
+                    margin-bottom:5px;
+                }
+                .contact-left-title hr{
+                    border:none;
+                    width:120px;
+                    height:5px;
+                    background:rgb(69, 69, 222);
+                    border-radius:10px;
+                    margin-bottom:20px;
+                }
+                .contact-left textarea{
+                    height:140px;
+                    padding-top:15px;
+                    border-radius:20px;
+
+                }
+                .contact-inputs{
+                    width:400px;
+                    height:50px;
+                    border:none;
+                    outline:none;
+                    padding-left: 25px;
+                    font-weight:500;
+                    color:black;
+                    border-radius:50px;
+                }
+                .contact-inputs:focus{
+                    border:2px solid rgb(23, 23, 232);
+                }
+                .contact-inputs::placeholder{
+                    color:gray;
+                }
+                .contact-left button{
+                    display:flex;
+                    align-items:center;
+                    padding :15px 30px;
+                    font-size:16px;
+                    color:whitesmoke;
+                    gap:10px;
+                    border:none;
+                    border-radius:50px;
+                    background:linear-gradient(270deg,blue,blue);
+                    cursor:pointer;
+
+
+                }
+                .contact-left button:hover{
+                    background:rgb(107, 107, 249) ;
+                }
+                .contact-left button:active{
+                    background:rgb(70, 70, 249) ;
+                }
+                .contact-right img{
+                    width:500px;
+
+                }
+                @media(max-width:800px){
+                    .contact-inputs{
+                        width:80vw;
+
+                    }
+                    .contact-right{
+                        display:none;
+                    }
+                }
+                    
+            </style>
+            <div class="contact-container">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                <div class="contact-left-title">
+                    <h2>Volunteers Application form</h2>
+                    <hr>
+                </div>
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                <input type="text" name="name" placeholder="Your name" class="contact-inputs" required>
+                <input type="text" name="Email" placeholder="Your Email" class="contact-inputs" required>
+                <input type="text" name="Contact Number" placeholder="Your contact number" class="contact-inputs" required>
+                <textarea name="message" placeholder="Add your bio" class="contact-inputs" required></textarea>
+            <button class="submit"> Submit</button>
+            </form>
+            <div class="contact-right">
+                <img src="C:\Users\Jeevitha R\WebCore"/vback.jpg" alt="">
+            </div>
+            
+            </div>
+
+        </body>
+    </head>
+</html>
