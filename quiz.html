@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: url("images/grid.jpg");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .quiz-container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px;
+        padding: 20px;
+        width: 90%;
+        max-width: 800px;
+        text-align: center;
+        overflow-y: auto; /* Allow scrolling if content overflows */
+        height: 80vh; /* Set a fixed height for the container */
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #000080;
+      }
+
+      .question {
+        margin-bottom: 15px;
+        text-align: left;
+      }
+      .button {
+        color: white;
+        background: #000080;
+        border-radius: 10px;
+        width: 200px;
+        padding: 10px 20px; /* adds padding to the button */
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quiz Page</title>
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      <body>
+        <div class="quiz-container">
+          <h1>Quiz</h1>
+          <form id="quiz-form">
+            <div class="question">
+              <p>
+                1. What is the main purpose of an emergency kit for a disaster?
+              </p>
+              <input type="radio" id="q1-option1" name="q1" value="incorrect" />
+              <label for="q1-option1">To entertain children</label><br />
+              <input type="radio" id="q1-option2" name="q1" value="correct" />
+              <label for="q1-option2">To provide essential supplies</label
+              ><br />
+              <input type="radio" id="q1-option3" name="q1" value="incorrect" />
+              <label for="q1-option3">To store personal documents</label><br />
+              <input type="radio" id="q1-option4" name="q1" value="incorrect" />
+              <label for="q1-option4">To decorate homes</label>
+            </div>
+
+            <div class="question">
+              <p>
+                2. Which system is used to alert the public about imminent
+                threats such as severe weather?
+              </p>
+              <input type="radio" id="q2-option1" name="q2" value="incorrect" />
+              <label for="q2-option1">Telephone Alert System</label><br />
+              <input type="radio" id="q2-option2" name="q2" value="incorrect" />
+              <label for="q2-option2">Emergency Broadcast System</label><br />
+              <input type="radio" id="q2-option3" name="q2" value="incorrect" />
+              <label for="q2-option3">Public Alert System</label><br />
+              <input type="radio" id="q2-option4" name="q2" value="correct" />
+              <label for="q2-option4">NOAA</label>
+            </div>
+
+            <div class="question">
+              <p>
+                3. In the event of a hurricane, what is typically the safest
+                place to be?
+              </p>
+              <input type="radio" id="q3-option1" name="q3" value="incorrect" />
+              <label for="q3-option1">Mobile home</label><br />
+              <input type="radio" id="q3-option2" name="q3" value="incorrect" />
+              <label for="q3-option2">Hill top</label><br />
+              <input type="radio" id="q3-option3" name="q3" value="incorrect" />
+              <label for="q3-option3">Park</label><br />
+              <input type="radio" id="q3-option4" name="q3" value="correct" />
+              <label for="q3-option4">Building with no windows</label>
+            </div>
+
+            <div class="question">
+              <p>
+                4. Which phase of disaster management focuses on actions taken
+                before a disaster occurs?
+              </p>
+              <input type="radio" id="q4-option1" name="q4" value="incorrect" />
+              <label for="q4-option1">Recovery</label><br />
+              <input type="radio" id="q4-option2" name="q4" value="incorrect" />
+              <label for="q4-option2">Didn't consider</label><br />
+              <input type="radio" id="q4-option3" name="q4" value="incorrect" />
+              <label for="q4-option3">Didn't pay attention</label><br />
+              <input type="radio" id="q4-option4" name="q4" value="correct" />
+              <label for="q4-option4">Preparedness</label>
+            </div>
+
+            <div class="question">
+              <p>5. Which is a disaster?</p>
+              <input type="radio" id="q5-option1" name="q5" value="correct" />
+              <label for="q5-option1">Earthquake</label><br />
+              <input type="radio" id="q5-option2" name="q5" value="incorrect" />
+              <label for="q5-option2">Planting trees</label><br />
+              <input type="radio" id="q5-option3" name="q5" value="incorrect" />
+              <label for="q5-option3">Watering plants</label><br />
+              <input type="radio" id="q5-option4" name="q5" value="incorrect" />
+              <label for="q5-option4">Tree shelters</label>
+            </div>
+
+            <div class="question">
+              <p>
+                6. Disaster preparedness should only involve government agencies
+                and not individual citizens.
+              </p>
+              <input type="radio" id="q6-option1" name="q6" value="incorrect" />
+              <label for="q6-option1">True</label><br />
+              <input type="radio" id="q6-option2" name="q6" value="correct" />
+              <label for="q6-option2">False</label>
+            </div>
+
+            <div class="question">
+              <p>
+                7. The response phase of disaster management is focused on
+                long-term rebuilding and recovery of infrastructure.
+              </p>
+              <input type="radio" id="q7-option1" name="q7" value="incorrect" />
+              <label for="q7-option1">True</label><br />
+              <input type="radio" id="q7-option2" name="q7" value="correct" />
+              <label for="q7-option2">False</label>
+            </div>
+
+            <div class="question">
+              <p>
+                8. Disaster preparedness should involve both government agencies
+                and individual citizens.
+              </p>
+              <input type="radio" id="q8-option1" name="q8" value="correct" />
+              <label for="q8-option1">True</label><br />
+              <input type="radio" id="q8-option2" name="q8" value="incorrect" />
+              <label for="q8-option2">False</label>
+            </div>
+
+            <div class="question">
+              <p>
+                9. It is beneficial not to have a disaster preparedness kit that
+                includes items such as food, water, medications, and important
+                documents.
+              </p>
+              <input type="radio" id="q9-option1" name="q9" value="incorrect" />
+              <label for="q9-option1">True</label><br />
+              <input type="radio" id="q9-option2" name="q9" value="correct" />
+              <label for="q9-option2">False</label>
+            </div>
+
+            <div class="question">
+              <p>
+                10. It is essential to conduct regular drills and training
+                exercises to ensure effective disaster response.
+              </p>
+              <input type="radio" id="q10-option1" name="q10" value="correct" />
+              <label for="q10-option1">True</label><br />
+              <input
+                type="radio"
+                id="q10-option2"
+                name="q10"
+                value="incorrect"
+              />
+              <label for="q10-option2">False</label>
+            </div>
+
+            <button class="button" onclick="calculateScore()">Submit</button>
+          </form>
+          <div id="result"></div>
+        </div>
+
+        <script>
+          function calculateScore() {
+            const form = document.getElementById("quiz-form");
+            const resultDiv = document.getElementById("result");
+            const questions = form.querySelectorAll(".question");
+            let score = 0;
+
+            // Define correct answers for each question
+            const correctAnswers = {
+              q1: "q1-option2", // ID of the correct answer for question 1
+              q2: "q2-option4", // ID of the correct answer for question 2
+              q3: "q3-option4", // ID of the correct answer for question 3
+              q4: "q4-option4", // ID of the correct answer for question 4
+              q5: "q5-option1", // ID of the correct answer for question 5
+              q6: "q6-option2", // ID of the correct answer for question 6
+              q7: "q7-option2", // ID of the correct answer for question 7
+              q8: "q8-option1", // ID of the correct answer for question 8
+              q9: "q9-option2", // ID of the correct answer for question 9
+              q10: "q10-option1", // ID of the correct answer for question 10
+            };
+
+            // Iterate over each question
+            questions.forEach((question) => {
+              // Get the question name
+              const questionName = question.querySelector(
+                'input[type="radio"]'
+              ).name;
+              // Find the selected radio button for the current question
+              const selectedAnswerId = question.querySelector(
+                'input[type="radio"]:checked'
+              )?.id;
+
+              // Compare selected answer ID with the correct answer ID
+              if (selectedAnswerId === correctAnswers[questionName]) {
+                score++;
+              }
+            });
+
+            resultDiv.textContent = `You scored ${score} out of ${questions.length}.`;
+          }
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

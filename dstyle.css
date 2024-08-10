@@ -11,10 +11,11 @@ body {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
 }
 
 .donation-portal h2 {
-    color: #2196F3;
+    color: #000080;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -41,7 +42,7 @@ body {
 }
 
 .donate-btn {
-    background-color: #2196F3;
+    background-color:#000080;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -64,7 +65,7 @@ body {
 }
 
 .amount-btn {
-    background-color: #2196F3;
+    background-color: #000080;
     color: #fff;
     padding: 10px 20px;
     border: none;
