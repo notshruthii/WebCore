@@ -142,6 +142,7 @@ margin-top:60px;
    .container{
     margin:auto;
     text-align:center;
+    padding-bottom:100px;
 
    }
    .rows{
@@ -163,7 +164,7 @@ margin-top:60px;
     border-radius:3px;
  padding-top:10px;
  transition:1s;
- position:relative;
+ 
 margin-top:-30px;
     
    }
@@ -183,6 +184,7 @@ margin-top:-30px;
     
 
    }
+   
    .weather p{
     color:white;
     font-weight:600;
@@ -200,6 +202,24 @@ margin-top:-30px;
    .about h4{
     width:100%;
     font-weight:550;
+   }
+   .footer
+   {
+    padding-top:40px;
+    text-align:center;
+   }
+   .footer p{
+    font-size:20px;
+    text-align:center;
+    padding-right:30px;
+   }
+    .creator{
+    padding-left:30px;
+   }
+   .footer .fa{
+    padding-right:30px;
+    font-size:20px;
+    color:#000080;
    }
 
 
