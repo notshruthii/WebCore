@@ -101,6 +101,7 @@
       </ul>
     </div>
 
+    <!-- donation section -->
     <div class="donation">
       <div class="row">
         <div class="text">
@@ -116,6 +117,73 @@
         </div>
         <div class="button">
           <button class="donate-2"><i class="fa fa-heart-o"> </i>DONATE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- weather forecast -->
+    <div class="container">
+      <div class="rows">
+        <div class="weather">
+          <button class="geo-btn">Show Weather</button>
+          <p class="showDetails">User Location details</p>
+          <p class="weatherDetails">Weather details</p>
+          <script>
+            const showDetails = document.querySelector(".showDetails");
+            const weatherDetails = document.querySelector(".weatherDetails");
+            document.querySelector(".geo-btn").addEventListener("click", () => {
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                  (position) => {
+                    const { latitude, longitude } = position.coords;
+                    showDetails.textContent = `the latitude ${latitude} & the longitude ${longitude}`;
+
+                    // Call the OpenWeatherMap API
+                    const apiKey = "f7299736ab14a14add97d0c8de786e16";
+                    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+
+                    fetch(url)
+                      .then((response) => response.json())
+                      .then((data) => {
+                        if (data.weather && data.weather[0] && data.main) {
+                          const weather = data.weather[0];
+                          const temperatureInCelsius = data.main.temp - 273.15;
+                          weatherDetails.textContent = `Weather: ${weather.main}, Temperature: ${temperatureInCelsius}°C, Humidity: ${data.main.humidity}%`;
+                        } else {
+                          weatherDetails.textContent =
+                            "Error: Unable to retrieve weather data";
+                        }
+                      })
+                      .catch((error) => {
+                        weatherDetails.textContent = "Error: " + error.message;
+                      });
+                  },
+
+                  (error) => {
+                    showDetails.textContent = error.message;
+
+                    console.log(error.message);
+                  }
+                );
+              }
+            });
+          </script>
+        </div>
+        <div class="about">
+          <!-- footer -->
+          <section class="footer">
+            <h4>About us</h4>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque
+              quidem itaque libero <br />exercitationem eius amet nam quasi
+              earum cumque provident!
+            </p>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <p>Made by Shruthi<i class="fa fa-heart"></i></p>
+          </section>
         </div>
       </div>
     </div>
