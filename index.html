@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
       rel="stylesheet"
     />
+    <title>Disaster Contect</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -24,19 +25,25 @@
           <ul>
             <li>
               <a href="">Emergency Contacts</a>
+              <a href="natural-disasters/disaster.html">Natural Disaster</a>
 
-              <a href="">Natural Disasters</a>
-              <a href="">Volunteering</a>
+              <a href="volunteer.html">Volunteering</a>
               <a href="">About Us</a>
             </li>
           </ul>
         </div>
 
         <div class="donate-button">
-          <button class="donate"><i class="fa fa-heart-o"> </i>DONATE</button>
+          <a href="donation.html"
+            ><button class="donate">
+              <i class="fa fa-heart-o"> </i>DONATE
+            </button></a
+          >
         </div>
         <div class="user-icon">
-          <a href=""> <i class="fa fa-user" aria-hidden="true"></i> </a>
+          <a href="user.html">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </a>
         </div>
       </nav>
       <div class="news">
@@ -67,7 +74,19 @@
                 href="https://www.ndma.gov.in/sites/default/files/2024-08/All%20India%20Impact%20Based%20Weather%20Warning%20Bulletin%20%28Morning%29%20Dated%2010-08-2024_0.pdf"
                 target="_blank"
                 class="moving-link"
-                >**IMD Weather forecast**</a
+                >**IMD weather forecast**</a
+              >
+              <a
+                href="https://www.ndma.gov.in/sites/default/files/2024-08/CFCR_CWC_DFB_09.08.2024_0.pdf"
+                target="_blank"
+                class="moving-link"
+                >**CWC Flood Bulletin**</a
+              >
+              <a
+                href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.accuweather.com/en/in/bengaluru/204108/current-weather/204108&ved=2ahUKEwjz2_6ZpOqHAxULxTgGHbZVBisQFnoECBcQAQ&usg=AOvVaw322gTnW86bSdsSzeX4VAjG"
+                target="_blank"
+                class="moving-link"
+                >**CURRENT weather**</a
               >
             </div>
           </div>
@@ -89,6 +108,7 @@
       </ul>
     </div>
 
+    <!-- donation section -->
     <div class="donation">
       <div class="row">
         <div class="text">
@@ -103,9 +123,93 @@
           </p>
         </div>
         <div class="button">
-          <button class="donate-2"><i class="fa fa-heart-o"> </i>DONATE</button>
+          <a href="donation.html"
+            ><button class="donate-2">
+              <i class="fa fa-heart-o"> </i>DONATE
+            </button></a
+          >
         </div>
       </div>
     </div>
+
+    <!-- weather forecast -->
+    <div class="container">
+      <div class="rows">
+        <div class="weather">
+          <button class="geo-btn">Show Weather</button>
+          <p class="showDetails">User Location details</p>
+          <p class="weatherDetails">Weather details</p>
+          <script>
+            const showDetails = document.querySelector(".showDetails");
+            const weatherDetails = document.querySelector(".weatherDetails");
+            document.querySelector(".geo-btn").addEventListener("click", () => {
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                  (position) => {
+                    const { latitude, longitude } = position.coords;
+                    showDetails.textContent = `The latitude is ${latitude} & the longitude is ${longitude}`;
+
+                    // Call the OpenWeatherMap API
+                    const apiKey = "f7299736ab14a14add97d0c8de786e16";
+                    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+
+                    fetch(url)
+                      .then((response) => response.json())
+                      .then((data) => {
+                        if (data.weather && data.weather[0] && data.main) {
+                          const weather = data.weather[0];
+                          const temperatureInCelsius = data.main.temp - 273.15;
+                          weatherDetails.textContent = `Weather: ${weather.main}, Temperature: ${temperatureInCelsius}°C, Humidity: ${data.main.humidity}%`;
+                        } else {
+                          weatherDetails.textContent =
+                            "Error: Unable to retrieve weather data";
+                        }
+                      })
+                      .catch((error) => {
+                        weatherDetails.textContent = "Error: " + error.message;
+                      });
+                  },
+
+                  (error) => {
+                    showDetails.textContent = error.message;
+
+                    console.log(error.message);
+                  }
+                );
+              }
+            });
+          </script>
+        </div>
+        <div class="about">
+          <h4>
+            Disaster Connect is a dedicated humanitarian organization committed
+            to saving lives and rebuilding communities in the face of disaster.
+            We are driven by the belief that no one should face adversity
+            alone.<br />
+            <br />
+            Our Mission: To provide immediate relief and long-term support to
+            those affected by natural and man-made disasters. We strive to
+            empower communities to build resilience and recover stronger than
+            before.
+            <br />
+            <br />
+
+            Our Vision: A world where disasters do not define destinies, and
+            affected populations have the resources and support to thrive.
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <hr style="color: gray; width: 80%" />
+    <!-- footer -->
+    <section class="footer">
+      <p>Follow Us</p>
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <i class="fa fa-linkedin" aria-hidden="true"></i>
+      <p class="creator">WebCore<i class="fa fa-heart"></i></p>
+    </section>
   </body>
 </html>
