@@ -1,0 +1,62 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <meta UTF-8 />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="geo.css" />
+  </head>
+  <body>
+    <button class="geo-btn">show user location</button>
+    <p class="showDetails">User Location details</p>
+    <p class="weatherDetails">Weather details</p>
+    <script>
+      const showDetails = document.querySelector(".showDetails");
+      const weatherDetails = document.querySelector(".weatherDetails");
+      document.querySelector(".geo-btn").addEventListener("click", () => {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const { latitude, longitude } = position.coords;
+              showDetails.textContent = `the latitude ${latitude} & the longitude ${longitude}`;
+
+              // Call the OpenWeatherMap API
+              const apiKey = "f7299736ab14a14add97d0c8de786e16";
+              const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+
+              fetch(url)
+                .then((response) => response.json())
+                .then((data) => {
+                  if (data.weather && data.weather[0] && data.main) {
+                    const weather = data.weather[0];
+                    const temperatureInCelsius = data.main.temp - 273.15;
+                    weatherDetails.textContent = `Weather: ${weather.main}, Temperature: ${temperatureInCelsius}°C, Humidity: ${data.main.humidity}%`;
+                  } else {
+                    weatherDetails.textContent =
+                      "Error: Unable to retrieve weather data";
+                  }
+                })
+                .catch((error) => {
+                  weatherDetails.textContent = "Error: " + error.message;
+                });
+            },
+
+            (error) => {
+              showDetails.textContent = error.message;
+
+              console.log(error.message);
+            }
+          );
+        }
+      });
+    </script>
+  </body>
+</html> -->
