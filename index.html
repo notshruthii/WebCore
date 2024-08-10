@@ -36,7 +36,9 @@
           <button class="donate"><i class="fa fa-heart-o"> </i>DONATE</button>
         </div>
         <div class="user-icon">
-          <a href=""> <i class="fa fa-user" aria-hidden="true"></i> </a>
+          <a href="user.html">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </a>
         </div>
       </nav>
       <div class="news">
@@ -136,7 +138,7 @@
                 navigator.geolocation.getCurrentPosition(
                   (position) => {
                     const { latitude, longitude } = position.coords;
-                    showDetails.textContent = `the latitude ${latitude} & the longitude ${longitude}`;
+                    showDetails.textContent = `The latitude is ${latitude} & the longitude is ${longitude}`;
 
                     // Call the OpenWeatherMap API
                     const apiKey = "f7299736ab14a14add97d0c8de786e16";
@@ -170,22 +172,39 @@
           </script>
         </div>
         <div class="about">
-          <!-- footer -->
-          <section class="footer">
-            <h4>About us</h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque
-              quidem itaque libero <br />exercitationem eius amet nam quasi
-              earum cumque provident!
-            </p>
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-            <p>Made by Shruthi<i class="fa fa-heart"></i></p>
-          </section>
+          <h4>
+            Disaster Connect is a dedicated humanitarian organization committed
+            to saving lives and rebuilding communities in the face of disaster.
+            We are driven by the belief that no one should face adversity
+            alone.<br />
+            <br />
+            Our Mission: To provide immediate relief and long-term support to
+            those affected by natural and man-made disasters. We strive to
+            empower communities to build resilience and recover stronger than
+            before.
+            <br />
+            <br />
+
+            Our Vision: A world where disasters do not define destinies, and
+            affected populations have the resources and support to thrive.
+          </h4>
         </div>
       </div>
     </div>
+
+    <!-- footer -->
+    <section class="footer">
+      <h4>About us</h4>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque quidem
+        itaque libero <br />exercitationem eius amet nam quasi earum cumque
+        provident!
+      </p>
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <i class="fa fa-linkedin" aria-hidden="true"></i>
+      <p>Made by Shruthi<i class="fa fa-heart"></i></p>
+    </section>
   </body>
 </html>
