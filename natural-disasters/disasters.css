@@ -1,18 +1,9 @@
-.dis-links{
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("images/flood-bg1.jpg");
-    background-position:center;
-    margin:0px;
-    width:100%;
-    background-size:cover;
-    padding:100px 0;
-    text-align:center;
-    border-radius:0px;
- padding-top:30px;
-    flex:1;
-    
-    
-  
-  }
+*{
+  /* margin:0;
+  height:0;*/
+  font-family: "Poppins", sans-serif; 
+}
+
   .dis-links ul li{
     justify-content: space-evenly;
     display:inline-block;
@@ -21,9 +12,7 @@
     padding-right:30px;
   position:relative;
   transition:1s;
-  padding:50px 10px;
-  
-  
+  padding:30px 10px;
   }
   .dis-links ul li a{
     padding-top:90px;
@@ -38,8 +27,6 @@
   .dis-links ul li :hover{
    color: rgb(255, 251, 0);
    text-decoration:none;}
-   
-
 
 .dis-links{
   background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("flood-bg1.jpg");
@@ -47,27 +34,20 @@
   margin:0px;
   width:100%;
   background-size:cover;
-  padding:100px 0;
+  padding:90px 0;
   text-align:center;
   border-radius:0px;
 padding-top:30px;
   flex:1;
- 
-  
-  
-
 }
 .dis-links ul li{
   justify-content: space-evenly;
   display:inline-block;
   list-style:none;
-  padding-left:px;
   padding-right:30px;
 position:relative;
 transition:1s;
-padding:50px 10px;
-
-
+padding:30px 10px;
 }
 .dis-links ul li a{
   padding-top:90px;
@@ -82,14 +62,14 @@ padding:50px 10px;
 .dis-links ul li :hover{
  color: rgb(255, 251, 0);
  text-decoration:none;}
+ 
  .content{
-  
   margin:90px;
   line-height:30px;
   font-family:Arial, Helvetica, sans-serif;
  }
  .content h1{
-  font-size:40px;
+  font-size:35px;
   text-align:center;
  }
  .content h4{
