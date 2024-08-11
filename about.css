@@ -113,15 +113,76 @@ padding-top:40px;
     padding-right:30px;
    }
     .creator{
-    padding-left:30px;
+    padding-left:40px;
    }
    .footer .fa{
     padding-right:30px;
     font-size:20px;
     color:#000080;
    }
-   .content h2{
+   .campus h2{
    
     text-align:center;
     padding:25px ;
    }
+   .campus p{
+    text-align:left;
+    font-size:16px;
+    line-height:30px;
+   }
+
+   /*campus*/
+.campus{
+  width:80%;;
+  margin:auto;
+  text-align:center;
+  padding-top:50px;
+}
+.campus-col{
+ margin-bottom:30px;
+  flex-basis:32%;
+  overflow:hidden;
+  border-radius: 10px;
+  position:relative;
+}
+.campus-col img{
+  width:100%;
+  display:block;
+}
+.layer{
+  width:100%;
+  height:100%;
+  background:transparent;
+  position:absolute;
+ top:0;
+ left:0;
+ transition:0.5s;
+
+}
+.layer:hover{
+  background:rgba(255,0,0,0.5);
+}
+.layer h3{
+  color:transparent;
+  font-size: 26px;
+  font-weight:600;
+  bottom:0;
+  left:50%;
+  transform: translateX(-50%);
+  position:absolute;
+  transition:0.5s;
+}
+.layer:hover h3{
+  color:white;
+  bottom:49%;
+}
+.row{
+  margin-top:40px;
+  display:flex;
+  justify-content: space-between;
+  text-align:center;
+}
+h2{
+  text-align:center;
+  padding:40px;
+}
