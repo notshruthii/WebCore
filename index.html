@@ -144,9 +144,7 @@
           <button class="geo-btn">Show Weather</button>
           <p class="showDetails">User Location details</p>
           <p class="weatherDetails">Weather details</p>
-          <script type="text/javascript" src="apikey.js"></script>
           <script>
-            var weather_api = config.WEATHER_API;
             const showDetails = document.querySelector(".showDetails");
             const weatherDetails = document.querySelector(".weatherDetails");
             document.querySelector(".geo-btn").addEventListener("click", () => {
@@ -157,7 +155,7 @@
                     showDetails.textContent = `The latitude is ${latitude} & the longitude is ${longitude}`;
 
                     // Call the OpenWeatherMap API
-                    const apiKey = "weather_api";
+                    const apiKey = "f7299736ab14a14add97d0c8de786e16";
                     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
 
                     fetch(url)
